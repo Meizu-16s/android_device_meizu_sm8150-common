@@ -29,6 +29,11 @@ PRODUCT_TARGET_VNDK_VERSION := 28
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
     vendor/mokee/config/permissions/vendor.mokee.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.mokee.biometrics.fingerprint.inscreen.xml
+    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -44,11 +49,11 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libqdMetaData.system \
     libvulkan \
-    vendor.display.config@1.0
 
 # Fingerprint
 PRODUCT_PACKAGES += \
     mokee.biometrics.fingerprint.inscreen@1.0-service.meizu_sm8150
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_sdm845
 
 # Init
 PRODUCT_PACKAGES += \
